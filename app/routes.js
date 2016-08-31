@@ -1,4 +1,4 @@
-
+var path = require('path');
 
 module.exports = function (app, configs) {
 
@@ -26,10 +26,13 @@ module.exports = function (app, configs) {
 
     app.post('/company/add', function (req, res) {
         var company_data = req.body;
+        company_data.createdAt = Date.now();
+
         Models.Company.create(company_data, function (err, addedCompany) {
             if (err) {
                 res.status(500).send(err);
             }
+
             res.json(addedCompany);
         });
 
