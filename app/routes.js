@@ -4,7 +4,7 @@ module.exports = function (app, configs) {
 
     var Models = require('./models')(configs);
 
-    app.post("/company/all", function (req, res) {
+    app.post("/api/company/all", function (req, res) {
         Models.Company.find({ }, function (err, company) {
             if (err) {
                 res.status(500).send(err);
@@ -14,7 +14,7 @@ module.exports = function (app, configs) {
         });
     });
 
-    app.get("/company/:cid", function (req, res) {
+    app.get("/api/company/:cid", function (req, res) {
         Models.Company.findOne({ 'id': req.params.cid }, function (err, company) {
             if (err) {
                 res.status(500).send(err);
@@ -24,7 +24,7 @@ module.exports = function (app, configs) {
         });
     });
 
-    app.post('/company/add', function (req, res) {
+    app.post('/api/company/add', function (req, res) {
         var company_data = req.body;
         company_data.createdAt = Date.now();
 
@@ -38,7 +38,7 @@ module.exports = function (app, configs) {
 
     });
 
-    app.post('/company/remove/:cid', function (req, res) {
+    app.post('/api/company/remove/:cid', function (req, res) {
         var cid = req.params.cid;
         Models.Company.remove({ 'id': cid }, function (err) {
             if (err) {
@@ -47,6 +47,10 @@ module.exports = function (app, configs) {
             
             res.json({ removed: true });
         });
+    });
+
+    app.get('*', function(req, res) {
+        res.sendFile('./public/index.html'); // load our public/index.html file
     });
 
 };

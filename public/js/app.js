@@ -1,0 +1,1 @@
+angular.module('geoLocatorApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'CompanyCtrl', 'CompanyService']);
