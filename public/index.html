@@ -1,46 +1,59 @@
 <!-- public/index.html -->
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <base href="/">
+    <head>
+        <meta charset="UTF-8">
+        <base href="/">
 
-    <title>CS&ES - GeoLocator</title>
+        <title>CS&ES - GeoLocator</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+        <!-- CSS -->
+        <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/commons.css">
 
-    <!-- JS -->
-    <script src="libs/angular/angular.min.js"></script>
-    <script src="libs/angular-route/angular-route.min.js"></script>
+        <!-- JS -->
+        <script src="libs/angular/angular.min.js"></script>
+        <script src="libs/angular-route/angular-route.min.js"></script>
+        <script src="libs/jquery/dist/jquery.min.js"></script>
+        <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <!-- ANGULAR CUSTOM -->
-    <script src="js/controllers/MainController.js"></script>
-    <script src="js/controllers/CompanyController.js"></script>
-    <script src="js/services/CompanyService.js"></script>
-    <script src="js/appRoutes.js"></script>
-    <script src="js/app.js"></script>
-</head>
+        <!-- ANGULAR CUSTOM -->
+        <script src="js/controllers/MainController.js"></script>
+        <script src="js/controllers/CompanyController.js"></script>
+        <script src="js/services/CompanyService.js"></script>
+        <script src="js/appRoutes.js"></script>
+        <script src="js/app.js"></script>
+    </head>
 
-<body ng-app="geoLocatorApp" ng-controller="CompanyController">
-<div class="container">
+    <body ng-app="geoLocatorApp" ng-controller="CompanyController">
 
-    <!-- HEADER -->
-    <nav class="navbar navbar-inverse">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/">GeoLocator</a>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">GeoLocator</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/">Landscape</a></li>
+                        <li><a href="/list">Directory</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <!-- ANGULAR DYNAMIC CONTENT -->
+            <div ng-view></div>
+
         </div>
-
-        <!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
-        <ul class="nav navbar-nav">
-            <li><a href="/list">Directory</a></li>
-        </ul>
-    </nav>
-
-    <!-- ANGULAR DYNAMIC CONTENT -->
-    <div ng-view></div>
-
-</div>
-</body>
+    </body>
 </html>
