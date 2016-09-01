@@ -7,6 +7,7 @@
  * Mongo
 
 ## How to Run
+ 1. Start the MongoDB server in default port `27017` and create a database called `geolocator`
  1. run `npm install` to fetch all node dependencies
  2. run `bower install` to fetch all bower dependencies
  3. run `node server.js` to start the server
