@@ -13,3 +13,11 @@
  3. run `node server.js` to start the server
  4. navigate to `http://localhost:9090` to see the index.html
  
+## Service Operations
+  All operations are defined at file [routes.js](app/routes.js)
+
+ * `/api/company/all` - __POST__ - Fetch all companies or returns lists according to the given search criteria
+ * `/api/company/:cid` - __GET__ - Get a company by its id
+ * `/api/company/add` - __POST__ - Adds a new company to the database
+ * `/api/company/edit` - __POST__ - Edits existing information about a company
+ * `/api/company/remove/:cid` - __POST__ - Removes a company identified by the given id (`cid`) from database
