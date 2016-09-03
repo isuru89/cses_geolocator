@@ -8,6 +8,12 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
             controller: 'MainController'
         })
 
+        // login page
+        .when('/login', {
+            templateUrl: 'views/login.html',
+            controller: 'LoginController'
+        })
+
         // list of companies table
         .when('/list', {
             templateUrl: 'views/list.html',

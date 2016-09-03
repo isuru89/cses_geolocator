@@ -1,9 +1,20 @@
 var path = require('path');
 var _ = require('lodash');
 
+var passport = require('passport');
+
 module.exports = function (app, configs) {
 
-    var Models = require('./models')(configs);
+    // load all db models
+    var Models = require('./models')(configs.db);
+
+    // initialize authentication middleware...
+    app.use(passport.initialize());
+    app.use(passport.session());
+
+    // load authentication module...
+    require('./auth')(passport, app, configs, Models);
+
 
     app.post("/api/company/all", function (req, res) {
         var sq = req.body || {}
@@ -77,4 +88,11 @@ module.exports = function (app, configs) {
         res.sendFile('./public/index.html'); // load our public/index.html file
     });
 
+};
+
+function ensureAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect('/login');
 };
