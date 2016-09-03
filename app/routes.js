@@ -1,11 +1,14 @@
 var path = require('path');
+var _ = require('lodash');
 
 module.exports = function (app, configs) {
 
     var Models = require('./models')(configs);
 
     app.post("/api/company/all", function (req, res) {
-        Models.Company.find({ }, function (err, company) {
+        var sq = req.body || {}
+
+        Models.Company.find(sq, function (err, company) {
             if (err) {
                 res.status(500).send(err);
             }
@@ -46,6 +49,27 @@ module.exports = function (app, configs) {
             }
             
             res.json({ removed: true });
+        });
+    });
+
+    app.post('/api/company/edit', function (req, res) {
+        var company_data = req.body;
+        if (company_data._ver) {
+            delete company_data._ver;
+        }
+
+        var id = company_data._id;
+        delete company_data._id;
+        if (company_data.createdAt) {
+            delete company_data.createdAt;
+        }
+        company_data.updatedAt = Date.now();
+
+        Models.Company.findByIdAndUpdate(id, { $set: company_data}, { new: true }, function (err, company) {
+            if (err) {
+                res.status(500).send("Update failed of document " + id + "!");
+            }
+            res.send(company);
         });
     });
 
