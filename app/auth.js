@@ -128,7 +128,7 @@ function googleStrategy(token, refreshToken, profile, done) {
 
 function localStrategy(req, username, password, done) {
     // check in mongo if a user with username exists or not
-    User.findOne({ 'name': username }, function (err, user) {
+    User.findOne({ 'name': username, authDomain: 'local' }, function (err, user) {
         if (err) {
             return done(err);
         }
@@ -151,8 +151,7 @@ function localStrategy(req, username, password, done) {
 };
 
 function createOrLoadAdminUser(configs) {
-    var encrypted = createHash(configs.auth.admin.password);
-    User.findOne({ name: configs.auth.admin.name, 'password': encrypted }, function (err, user) {
+    User.findOne({ name: configs.auth.admin.name, authDomain: 'local' }, function (err, user) {
         if (err) {
             throw err;
         }
@@ -161,7 +160,7 @@ function createOrLoadAdminUser(configs) {
             var newUser = new User();
             // set the user's local credentials
             newUser.name = configs.auth.admin.name;
-            newUser.password = encrypted;
+            newUser.password = createHash(configs.auth.admin.password);
             newUser.authDomain = 'local';
             newUser.email = configs.auth.admin.email;
 
