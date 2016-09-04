@@ -2,9 +2,11 @@
 
 ## Prerequisites
  * Node.js
+   * node version >= `4` and npm version >= `3`
  * Bower
    * install using `npm install -g bower`
- * Mongo
+ * MongoDB
+   * Mongo version >= `3.2`
 
 ## How to Run
  1. Start the MongoDB server in default port `27017` and create a database called `geolocator`
