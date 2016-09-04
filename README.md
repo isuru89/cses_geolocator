@@ -14,9 +14,9 @@
  4. navigate to `http://localhost:9090` to see the index.html
 
 ## Import data to MongoDB
- * mongoimport.exe -d geolocator -c Company --type csv --file <project-location>\company.csv --headerline
+ * `mongoimport.exe -d geolocator -c Company --type csv --file <project-location>\company.csv --headerline`
  
- eg: mongoimport.exe -d geolocator -c Company --type csv --file C:\Projects\csnes\cses_geolocator\company.csv --headerline
+ eg: `mongoimport.exe -d geolocator -c Company --type csv --file C:\Projects\csnes\cses_geolocator\company.csv --headerline`
 
 ## Service Operations
   All operations are defined at file [routes.js](app/routes.js)
