@@ -12,7 +12,13 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
         .when('/list', {
             templateUrl: 'views/list.html',
             controller: 'CompanyController'
-        });
+        })
+
+        //shows details of a company
+        .when('/details', {
+            templateUrl: 'views/details.html',
+            controller: 'CompanyDetailsController'
+        });        
 
     $locationProvider.html5Mode(true);
 
