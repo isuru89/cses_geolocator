@@ -18,8 +18,10 @@ module.exports = function (app, configs) {
     });
 
     app.get("/api/company/:cid", function (req, res) {
-        Models.Company.findOne({ 'companyName': req.params.cid }, function (err, company) {
-            console.log( req.params.cid);
+        var cid = req.params.cid;
+
+        Models.Company.findOne({ 'companyId': cid }, function (err, company) {
+            
             if (err) {
                 res.status(500).send(err);
             }
