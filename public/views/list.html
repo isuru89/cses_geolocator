@@ -4,7 +4,7 @@
     <table border=1>
         <tr ng-repeat="company in companies">
             <td>{{company.companyId}}</td>
-            <td>{{company.companyName}}</td>
+            <td><a href="/details?cid={{company.companyName}}">{{company.companyName}}</a></td>
         </tr>
     </table>
 </div>

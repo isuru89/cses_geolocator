@@ -1,1 +1,1 @@
-angular.module('geoLocatorApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'CompanyCtrl', 'CompanyService']);
+angular.module('geoLocatorApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'CompanyCtrl','CompanyDetailsCtrl', 'CompanyService']);
