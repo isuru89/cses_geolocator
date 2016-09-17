@@ -1,8 +1,8 @@
 module.exports = function (mongoose) {
 
     return mongoose.model('Company', {
-                id: String,
-                name: String,
+                companyId: String,
+                companyName: String,
 
                 address: String,
 
