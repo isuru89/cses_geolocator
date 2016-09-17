@@ -3,15 +3,15 @@ companyId,companyName,address,longitude,latitude,email,website,phoneNumber,headO
 2,Aasa IT Solutions,"146/7, Pasal Mawatha,Attidiya, Dehiwala, Sri Lanka",6.852154,79.90829,info@aasait.com,http://aasait.com/,,,,
 3,AdroitLogic,"12/5, Pirivena Road, Mount Lavinia, Sri Lanka 10370",6.826515,79.870919,info@adroitlogic.com,http://adroitlogic.org,,,,
 4,Arimac Lanka,"216/17, Athurugiriya Rd, Kottawa, Sri Lanka. ",6.843918,79.967257,hello@arimaclanka.com,http://arimaclanka.com/,,,,
-5,AtLink,"71A, Dudley Senanayake Mawatha, Colombo 8, Sri Lanka",6.911325,79.876884,,http://www.atlinkcom.com,"+94-11-2675602",,,
+5,AtLink,"71A, Dudley Senanayake Mawatha, Colombo 8, Sri Lanka",6.911325,79.876884,,http://www.atlinkcom.com,-2675519,,,
 6,Atrenta,"No: 3, 2/1, Lakshmi Gardens, Colombo 00800, Sri Lanka",6.915865,79.876388,,https://www.synopsys.com,,,,Company Closed
-7,CodeConnexion,"No 21A, 1st Lane, Kirulapone, Colombo 05, Sri Lanka.",6.875291,79.882305,,http://www.codeconnexion.com/,"+94 11 2 825044",,,Company Closed
-8,Codegen,"Bay 1-5. Trace Expert City, Tripoli Square, Colombo 10, Sri Lanka.",6.9299229,79.8615333,info@codegen.net,http://www.codegen.co.uk,"+94 11202 44 00",,,
-9,Creo360,,,,,,,,,
-10,DirectFN,,,,,,,,,
-11,Ellipsis,,,,,,,,,
-12,Embla,,,,,,,,,
-13,hSenid,,,,,,,,,
+7,CodeConnexion,"No 21A, 1st Lane, Kirulapone, Colombo 05, Sri Lanka.",6.875291,79.882305,,http://www.codeconnexion.com/,+94 11 2 825044,,,Company Closed
+8,Codegen,"Bay 1-5. Trace Expert City, Tripoli Square, Colombo 10, Sri Lanka.",6.9299229,79.8615333,info@codegen.net,http://www.codegen.co.uk,+94 11202 44 00,,,
+9,Creo360,"73/7 Temple Road (Off Kirulapone Ave), Kirulapone, Colombo 06., Temple Rd, Colombo 00600, Sri Lanka",6.88142,79.873436,info@creo360.com,http://creo360.com,+94 11 251-4565,,,
+10,DirectFN,"Level 10, Parkland, No. 33, Park St, Colombo, Sri Lanka",6.916857,79.858939,lk.info@directfn.com,http://lk.directfn.com/,+94 112 593939,,,
+11,Ellipsis,"35/C, Torrington Avenue, Colombo 7, Sri lanka ",6.896431,79.870131,support@ellipsis.lk,http://www.ellipsis.lk/,+94 112 591 455,,,
+12,Embla,"49, 1st Templers Mw, Off Templers Road, Mt. Lavinia, Dehiwala-Mount Lavinia 10370, Sri Lanka",6.833267,79.88231,contact@embla.asia,http://www.embla.asia,+94 112 761 696,,,
+13,hSenid,"320, 2nd Floor, T.B Jayah Mawatha, Colombo 10, Sri Lanka",6.9236109,79.7902454,,http://www.hsenid.com/,+94 112 686 751,,,
 14,IronOne,,,,,,,,,
 15,Leapset,,,,,,,,,
 16,Mazarin,,,,,,,,,
