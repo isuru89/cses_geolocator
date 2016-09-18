@@ -16,7 +16,8 @@
     "animate.css": "latest",
     "angular": "latest",
     "angular-route": "latest",
-    "jquery": "latest"
+    "jquery": "latest",
+	"ngmap": "latest"
   },
   "homepage": "",
   "ignore": [
