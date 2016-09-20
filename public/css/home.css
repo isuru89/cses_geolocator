@@ -2,8 +2,20 @@
     Created on : Sep 20, 2016, 1:43:08 PM
     Author     : LAKJEEWA
 */
+.main-content .ng-view-content{
+	height: 100%;
+}
 
 .main-content {
 	width: 100%;
 	padding: 0px;
+	height: 100%;
+}
+
+.main-content .map-container {
+	height: 100%;
+}
+
+.main-content .map-container ng-map {
+	height: 100%;
 }
