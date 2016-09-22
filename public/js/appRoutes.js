@@ -1,25 +1,22 @@
-angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
 
-    $routeProvider
+        $routeProvider
 
-        // home page
-        .when('/', {
-            templateUrl: 'views/home.html',
-            controller: 'MainController'
-        })
+                // home page
+                .when('/', {
+                    templateUrl: 'views/landscape.html'
+                })
 
-        // list of companies table
-        .when('/list', {
-            templateUrl: 'views/list.html',
-            controller: 'CompanyController'
-        })
+                // list of companies table
+                .when('/directory', {
+                    templateUrl: 'views/directory.html'
+                })
 
-        //shows details of a company
-        .when('/details', {
-            templateUrl: 'views/details.html',
-            controller: 'CompanyDetailsController'
-        });        
+                //shows details of a company
+                .when('/details', {
+                    templateUrl: 'views/details.html'
+                });
 
-    $locationProvider.html5Mode(true);
-
-}]);
+        $locationProvider.html5Mode(true);
+        
+    }]);

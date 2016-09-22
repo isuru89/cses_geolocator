@@ -21,15 +21,15 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdU7aA7mrqoL9HHfPqlUaX-zsjlPNqhas"></script>
 
         <!-- ANGULAR CUSTOM -->
-        <script src="js/controllers/MainController.js"></script>
-        <script src="js/controllers/CompanyController.js"></script>
-        <script src="js/controllers/CompanyDetailsController.js"></script>
+        <script src="js/controllers/LandscapeController.js"></script>
+        <script src="js/controllers/DirectoryController.js"></script>
+        <script src="js/controllers/CompanyDetailController.js"></script>
         <script src="js/services/CompanyService.js"></script>
         <script src="js/appRoutes.js"></script>
         <script src="js/app.js"></script>
     </head>
 
-    <body ng-app="geoLocatorApp" ng-controller="CompanyController">
+    <body ng-app="geoLocatorApp">
 
         <!-- Navigation Bar -->
         <nav class="navbar navbar-inverse">
@@ -45,7 +45,7 @@
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="/">Landscape</a></li>
-                        <li><a href="/list">Directory</a></li>
+                        <li><a href="/directory">Directory</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
