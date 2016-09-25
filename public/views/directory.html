@@ -2,7 +2,7 @@
     
     <div class="company-list-view">
         <h2>Company List</h2>
-        <table border=1>
+        <table class="table-align-center" border=1>
             <tr ng-repeat="company in companies | orderBy:'companyName'">
                 <td ng-click="setSelectedCompany(company)">{{company.companyName}}</td>
             </tr>
@@ -12,7 +12,7 @@
         <div class="jumbotron text-center" ng-controller="CompanyDetailController">
             <h2>Company details</h2>
 
-            <table border=1>
+            <table class="table-align-center" border=1>
                 <tr>
                     <td>Company Name</td>
                     <td>{{$parent.selectedCompany.companyName}}</td>
