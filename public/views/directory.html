@@ -1,12 +1,14 @@
 <div class="jumbotron text-center directory-wrapper directory-wrapper-parent" ng-controller="DirectoryController">
-    
+
     <div class="company-list-view">
         <h2>Company List</h2>
-        <table class="table-align-center company-list-table" border=1>
-            <tr ng-repeat="company in companies | orderBy:'companyName'">
-                <td class="company-item" ng-click="setSelectedCompany(company)"><a>{{company.companyName}}</a></td>
-            </tr>
-        </table>
+        <div class="company-details-table-wrapper">
+            <table class="table-align-center company-list-table" border=1>
+                <tr ng-repeat="company in companies | orderBy:'companyName'">
+                    <td class="company-item" ng-click="setSelectedCompany(company)"><a>{{company.companyName}}</a></td>
+                </tr>
+            </table>
+        </div>
     </div>
     <div class=company-details-view>
         <div class="jumbotron text-center directory-wrapper" ng-controller="CompanyDetailController">
