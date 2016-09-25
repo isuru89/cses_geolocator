@@ -2,7 +2,7 @@
     <h2>Company List</h2>
 
     <table border=1>
-        <tr ng-repeat="company in companies">
+        <tr ng-repeat="company in companies | orderBy:'companyName'">
             <td><a href="/details?cid={{company.companyId}}">{{company.companyName}}</a></td>
         </tr>
     </table>
