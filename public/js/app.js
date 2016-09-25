@@ -6,7 +6,7 @@ app.controller('LandscapeController', LandscapeController)
         .config(function ($stateProvider) {
                 var landscapeState = {
                         name: 'landscape',
-                        url: '/',
+                        url: '/landscape/:companyId',
                         templateUrl: 'views/landscape.html',
                         activetab: 'landscape'
                 }
@@ -22,7 +22,7 @@ app.controller('LandscapeController', LandscapeController)
                 $stateProvider.state(directoryState);
         }).
         config(function ($urlRouterProvider) {
-                $urlRouterProvider.when('', '/');
+                $urlRouterProvider.when('', '/landscape/');
         });
 
 
