@@ -1,11 +1,17 @@
 .company-details-view {
     width: 70%;
     display: inline-block;
+    padding: 2px 10px 2px 10px;
+    background-color: beige;
+    border-radius: 0.5pc;
 }
 
 .company-list-view {
     width: 25%;
     display: inline-block;
+    padding: 2px 2px 2px 2px;
+    background-color: beige;
+    border-radius: 0.5pc;
 }
 
 .table-align-center {
@@ -23,10 +29,12 @@
     text-decoration: underline;
     background-color: #f4f7ff;
     font-weight: 500;
+    border: 1px solid white;
 }
 
 .jumbotron.text-center.directory-wrapper.ng-scope {
     background-color: white;
+    padding-top: 0px;
 }
 
 .company-list-table {
@@ -38,4 +46,8 @@ td.company-item.ng-binding {
     padding-top: 2px;
     cursor: pointer;
     font-weight: 500;
+}
+
+.jumbotron.text-center.directory-wrapper.directory-wrapper-parent.ng-scope {
+    padding-top: 15px;
 }
