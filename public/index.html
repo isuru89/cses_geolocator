@@ -15,7 +15,7 @@
 
         <!-- JS -->
         <script src="libs/angular/angular.min.js"></script>
-        <script src="libs/angular-route/angular-route.min.js"></script>
+        <script src="libs/angular-ui-router/release/angular-ui-router.min.js"></script>
         <script src="libs/jquery/dist/jquery.min.js"></script>
         <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="libs/ngmap/build/scripts/ng-map.min.js"></script>
@@ -45,8 +45,8 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="/">Landscape</a></li>
-                        <li><a href="/directory">Directory</a></li>
+                        <li ui-sref-active="active"><a ui-sref="landscape">Landscape</a></li>
+                        <li ui-sref-active="active"><a ui-sref="directory">Directory</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -57,7 +57,7 @@
 
         <div class="container main-content">
             <!-- ANGULAR DYNAMIC CONTENT -->
-            <div class="ng-view-content" ng-view></div>
+            <ui-view></ui-view>
 
         </div>
     </body>

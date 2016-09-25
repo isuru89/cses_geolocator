@@ -1,22 +1,19 @@
-angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+/*angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
 
         $routeProvider
 
                 // home page
                 .when('/', {
-                    templateUrl: 'views/landscape.html'
+                    templateUrl: 'views/landscape.html',
+                    activetab: 'landscape'
                 })
 
                 // list of companies table
                 .when('/directory', {
-                    templateUrl: 'views/directory.html'
+                    templateUrl: 'views/directory.html',
+                    activetab: 'directory'
                 })
-
-                //shows details of a company
-                .when('/details', {
-                    templateUrl: 'views/details.html'
-                });
 
         $locationProvider.html5Mode(true);
         
-    }]);
+    }]);*/
