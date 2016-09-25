@@ -2,5 +2,7 @@
 <div ng-controller="LandscapeController" class="map-container"
      map-lazy-load="https://maps.google.com/maps/api/js"
      map-lazy-load-params="{{googleMapsUrl}}">
-    <ng-map center="6.921985, 79.926546" zoom="13"></ng-map>
+    <ng-map center="6.921985, 79.926546" zoom="13">
+        <marker ng-repeat="myMarker in markers" position="[{{myMarker.latitude}},{{myMarker.longitude}}]" ></marker>
+    </ng-map>
 </div>

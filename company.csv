@@ -1,4 +1,4 @@
-companyId,companyName,address,longitude,latitude,email,website,phoneNumber,headOfficeAddress,companyCEO,additionalNotes
+companyId,companyName,address,latitude,longitude,email,website,phoneNumber,headOfficeAddress,companyCEO,additionalNotes
 1,99x,"#65, Walukarama Road, Colombo 03, SRI LANKA",6.905372,79.854481,info@99x.lk,http://www.99xtechnology.com/,,,,
 2,Aasa IT Solutions,"146/7, Pasal Mawatha,Attidiya, Dehiwala, Sri Lanka",6.852154,79.90829,info@aasait.com,http://aasait.com/,,,,
 3,AdroitLogic,"12/5, Pirivena Road, Mount Lavinia, Sri Lanka 10370",6.826515,79.870919,info@adroitlogic.com,http://adroitlogic.org,,,,
