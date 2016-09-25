@@ -4,8 +4,8 @@
             <div ng-non-bindable>
                 <h4> Company Name : {{selectedCompany.title}}</h4>
                 <h4> Address : {{selectedCompany.address}}</h4>
-                <h4> Website : {{selectedCompany.website}}</h4>
-                <h4> Email : {{selectedCompany.email}}</h4>
+                <h4> Website : <a href="{{selectedCompany.website}}">{{selectedCompany.website}}</a></h4>
+                <h4> Email : <a href="mailto:{{selectedCompany.email}}">{{selectedCompany.email}}</a></h4>
             </div>
         </info-window>
         <marker ng-repeat="myMarker in markers" title="{{myMarker.title}}" position="[{{myMarker.latitude}},{{myMarker.longitude}}]"
