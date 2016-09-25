@@ -42,6 +42,15 @@
     border-color: #6c9f43;
 }
 
+.search-box {
+    border-radius: 10px;
+    width: 60%;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
 /* Following is to make map view full screen */
 body, html {
   height: 96%;

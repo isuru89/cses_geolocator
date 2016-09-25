@@ -1,9 +1,24 @@
 <div class="jumbotron text-center" ng-controller="DirectoryController">
     <h2>Company List</h2>
 
-    <table border=1>
-        <tr ng-repeat="company in companies">
-            <td><a href="/details?cid={{company.companyId}}">{{company.companyName}}</a></td>
-        </tr>
-    </table>
+    <div >
+    	<div align="center">
+	    	<input type="text" class="form-control search-box" placeholder="Search" ng-model="searchCompany">
+	    	<br>
+    	</div>
+    	<table  class="table table-striped table-hover">
+	    	<tr>
+	    		<th class="text-align-center">Company Name</th>
+	    		<th class="text-align-center">Address</th>
+	    		<th class="text-align-center">Email</th>
+	    		<th class="text-align-center">Web Site</th>
+	    	</tr>
+	    	<tr ng-repeat="company in companies | filter: searchCompany">
+	    		<td><a href="/details?cid={{company.companyId}}">{{company.companyName}}</a></td>
+	    		<td>{{company.address}}</td>
+	    		<td>{{company.email}}</td>
+	    		<td><a href="{{company.website}}">{{company.website}}</td>
+	    	</tr>
+    	</table>
+    </div>
 </div>
