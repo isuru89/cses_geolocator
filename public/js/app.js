@@ -20,6 +20,9 @@ app.controller('LandscapeController', LandscapeController)
 
                 $stateProvider.state(landscapeState);
                 $stateProvider.state(directoryState);
+        }).
+        config(function ($urlRouterProvider) {
+                $urlRouterProvider.when('', '/');
         });
 
 
