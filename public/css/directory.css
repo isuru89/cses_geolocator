@@ -1,0 +1,9 @@
+.company-details-view {
+    width: 70%;
+    display: inline-block;
+}
+
+.company-list-view {
+    width: 25%;
+    display: inline-block;
+}
