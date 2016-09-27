@@ -2,9 +2,13 @@
 
     <div class="company-list-view">
         <h2>Company List</h2>
+        <div align="center">
+            <input type="text" class="form-control search-box" placeholder="Search" ng-model="searchCompany">
+            <br>
+        </div>
         <div class="company-details-table-wrapper">
             <table class="table-align-center company-list-table" border=1>
-                <tr ng-repeat="company in companies | orderBy:'companyName'">
+                <tr ng-repeat="company in companies | orderBy:'companyName' | filter: searchCompany">
                     <td class="company-item" ng-click="setSelectedCompany(company)"><a>{{company.companyName}}</a></td>
                 </tr>
             </table>
