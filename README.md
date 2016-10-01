@@ -28,3 +28,15 @@
  * `/api/company/add` - __POST__ - Adds a new company to the database
  * `/api/company/edit` - __POST__ - Edits existing information about a company
  * `/api/company/remove/:cid` - __POST__ - Removes a company identified by the given id (`cid`) from database
+
+## Advanced Configurations
+ * Setup MongoDB Admin User / DB user Application authentication
+   * Start the mongod.exe without --auth
+   * Start mongo.exe
+   * `use admin`
+   * `db.createUser({user: "myUserAdmin", pwd: "abc123",roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]})`
+   * `use geolocator`
+   * `db.createUser({user: "myTester",pwd: "xyz123",roles: [{role: "readWrite", db: "test" }]})`
+   * Restart mongod.exe with --auth
+   * Change config/db.js
+   * `url : 'mongodb://myTester:xyz123@localhost:27017/geolocator'`
