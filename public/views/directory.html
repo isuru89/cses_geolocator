@@ -1,50 +1,50 @@
 <div class="jumbotron text-center directory-wrapper directory-wrapper-parent" ng-controller="DirectoryController">
 
     <div class="company-list-view">
-        <h2>Company List</h2>
+        <h2>COMPANY LIST</h2>
         <div align="center">
-            <input type="text" class="form-control search-box" placeholder="Search" ng-model="searchCompany">
+            <input type="text" class="form-control search-box" placeholder="Search" ng-model="search.companyName">
             <br>
         </div>
         <div class="company-details-table-wrapper">
             <table class="table-align-center company-list-table" border=1>
-                <tr ng-repeat="company in companies | orderBy:'companyName' | filter: searchCompany">
-                    <td class="company-item" ng-click="setSelectedCompany(company)"><a>{{company.companyName}}</a></td>
+                <tr ng-repeat="company in companies | orderBy:'companyName' | filter: search">
+                    <td class="company-item" ng-click="setSelectedCompany(company)"><a class="custom-text-hyperlink">{{company.companyName}}</a></td>
                 </tr>
             </table>
         </div>
     </div>
     <div class=company-details-view>
-        <div class="jumbotron text-center directory-wrapper" ng-controller="CompanyDetailController">
-            <h2>Company Details</h2>
+        <div class=" text-center directory-wrapper" ng-controller="CompanyDetailController">
+            <h2 class="company-details-header">COMPANY DETAILS</h2>
 
-            <table class="table-align-center" border=1>
+            <table class="table-align-center company-details-table" border=1>
                 <tr>
-                    <td>Company Name</td>
-                    <td>{{$parent.selectedCompany.companyName}}</td>
+                    <td class="company-attribute">Company Name</td>
+                    <td class="company-value">{{$parent.selectedCompany.companyName}}</td>
                 </tr>
                 <tr>
-                    <td>Address</td>
-                    <td>{{$parent.selectedCompany.address}}</td>
+                    <td class="company-attribute">Address</td>
+                    <td class="company-value">{{$parent.selectedCompany.address}}</td>
                 </tr>
                 <tr>
-                    <td>Email</td>
-                    <td><a href="mailto:{{$parent.selectedCompany.email}}">{{$parent.selectedCompany.email}}</a></td>
+                    <td class="company-attribute">Email</td>
+                    <td class="company-value"><a class="custom-text-hyperlink" href="mailto:{{$parent.selectedCompany.email}}">{{$parent.selectedCompany.email}}</a></td>
                 </tr>
                 <tr>
-                    <td>Website</td>
-                    <td><a href="{{$parent.selectedCompany.website}}">{{$parent.selectedCompany.website}}</a></td>
+                    <td class="company-attribute">Website</td>
+                    <td class="company-value"><a class="custom-text-hyperlink" href="{{$parent.selectedCompany.website}}">{{$parent.selectedCompany.website}}</a></td>
                 </tr>
                 <tr>
-                    <td>Phone number</td>
-                    <td>{{$parent.selectedCompany.phoneNumber}}</td>
+                    <td class="company-attribute">Phone number</td>
+                    <td class="company-value">{{$parent.selectedCompany.phoneNumber}}</td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="company-attribute">
                         Location in Map
                     </td>
-                    <td>
-                        <a ui-sref="landscape({companyId: $parent.selectedCompany.companyId})">Click Here..</a>
+                    <td class="map-click-here-wrapper">
+                        <a class="map-click-here custom-text-hyperlink" ui-sref="landscape({companyId: $parent.selectedCompany.companyId})">Click Here..</a>
                     </td>
                 </tr>
                 <!--<tr>

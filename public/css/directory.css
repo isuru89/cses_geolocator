@@ -3,32 +3,35 @@
     display: inline-block;
     vertical-align: top;
     padding: 2px 10px 2px 10px;
-    background-color: beige;
+    background-color: #edc06f;
     border-radius: 0.5pc;
 }
 
 .company-list-view {
     width: 25%;
     display: inline-block;
-    padding: 2px 2px 2px 2px;
-    background-color: beige;
+    padding: 2px 10px 10px 10px;
+    background-color: #D9853B;
     border-radius: 0.5pc;
+    color: white;
+    min-width: 250px;
 }
 
 .table-align-center {
     margin-left: auto;
     margin-right: auto;
+    color: white;
 }
 
-.directory-wrapper {    
+.directory-wrapper {
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
 }
 
 .company-item {
     cursor: pointer;
     text-decoration: underline;
-    background-color: #f4f7ff;
+    background-color: #fffff6;
     font-weight: 500;
     border: 1px solid white;
 }
@@ -39,7 +42,8 @@
 }
 
 .company-list-table {
-    width : 100%;
+    /* width : 100%; */
+    min-width: 200px;
 }
 
 td.company-item.ng-binding {
@@ -51,16 +55,68 @@ td.company-item.ng-binding {
 
 .jumbotron.text-center.directory-wrapper.directory-wrapper-parent.ng-scope {
     padding-top: 15px;
+    background-color: #f3f3f3;
 }
 
 .company-details-table-wrapper {
-    
-max-height: 500px;
-    
-overflow-y: scroll;
+    max-height: 440px;
+    overflow-y: auto;
+    width: 100%;
 }
 
 .search-box {
-    border-radius: 10px;
+    /* border-radius: 10px; */
     width: 60%;
+    outline: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e0e0e0;
+}
+
+td.company-item {
+    text-decoration: none;
+    background-color: white;
+    min-width: 200px;
+}
+
+td.company-attribute {
+    font-size: 1.5em;
+    font-weight: 700;
+    background-color: #adad30;
+}
+
+.company-details-header{
+    padding-bottom: 30px;
+}
+
+.company-details-header {
+    color: white;
+}
+
+.company-value a.ng-binding {
+    color: white;
+}
+
+.company-value a.ng-binding:focus, .company-value a.ng-binding:hover {
+    color: #222;
+    text-decoration: underline;
+}
+
+a.map-click-here:hover{
+    color: #222;
+}
+
+.company-value {
+    background-color: #adad30;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-style: italic;
+}
+
+.map-click-here-wrapper{
+    background-color: #229e22;
+}
+
+a.map-click-here {
+    color: white;
 }
