@@ -1,3 +1,3 @@
 module.exports = {
-	url : 'mongodb://localhost:27017/geolocator'
+	url: 'mongodb://tempuser:temp123@ds046939.mlab.com:46939/geolocator'
 }
